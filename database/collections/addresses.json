@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "665ac19b36c0604293aa1fc6"
+  },
+  "email": "test@mail.com",
+  "shippingAdress": {
+    "name": "test name",
+    "address": "road",
+    "pincode": "445",
+    "phone": "01581494806"
+  },
+  "__v": 0,
+  "billingAdress": {
+    "name": "test name",
+    "address": "test road",
+    "pincode": "33",
+    "phone": "01581494806"
+  }
+}]

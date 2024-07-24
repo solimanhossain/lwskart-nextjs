@@ -1,0 +1,92 @@
+{
+    "header": {
+        "search": "অনুসন্ধান",
+        "searchholder": "অনুসন্ধান করুন ...",
+        "wishlist": "অভিরুচি",
+        "cart": "কার্ট নথি"
+    },
+    "navbar": {
+        "home": "হোম",
+        "shop": "দোকান",
+        "aboutUs": "আমাদের সম্পর্কে",
+        "logout": "লগ আউট",
+        "login": "লগইন",
+        "AllCategories": "সকল শ্রেণী"
+    },
+    "banner": {
+        "title1": "বাড়ির সাজসজ্জার",
+        "title2": "সেরা সংগ্রহ",
+        "description": "ই-কমার্স হলো পণ্য এবং সেবার ইলেকট্রনিক বাণিজ্যিক ক্রয়-বিক্রয়, সাধারণত ইন্টারনেটের মাধ্যমে।",
+        "shopNow": "এখনই কিনুন"
+    },
+    "features": {
+        "freeShipping": "বিনামূল্যে প্রেরণ",
+        "orderOver": "$২০০ এর বেশি অর্ডার",
+        "moneyReturns": "টাকা ফেরত",
+        "moneyReturnsDescription": "৩০ দিনের টাকা ফেরত",
+        "support": "২৪/৭ সমর্থন",
+        "supportDescription": "গ্রাহক সহায়তা"
+    },
+    "home": {
+        "category": "শ্রেণী অনুসারে কেনাকাটা করুন",
+        "newArrivals": "নতুন আগমন",
+        "trending": "ট্রেন্ডিং পণ্য সমূহ"
+    },
+
+    "buttons": {
+        "addToCart": "কার্টে যোগ করুন",
+        "buyNow": "এখনই কিনুন",
+        "viewDetails": "বিস্তারিত দেখুন",
+        "share": "শেয়ার করুন",
+        "addToWishlist": "ইচ্ছেতালিকায় যোগ করুন"
+    },
+    "product": {
+        "title": "পণ্য",
+        "relatedProduct": "সম্পর্কিত পণ্য",
+        "details": "পণ্যের বিবরণ",
+        "addtocart": "কার্টে যোগ করুন",
+        "addToWishlist": "অভিরুচি করুন",
+        "addedtowishlist": "অভিরুচি হয়েছে"
+    },
+    "login": {
+        "title": "লগইন",
+        "welcomeMessage": "পুনরায় স্বাগতম, গ্রাহক",
+        "loginWith": "অথবা লগইন করুন",
+        "registerMessage": "আপনার কোনো অ্যাকাউন্ট নেই?",
+        "registerLink": "এখনই নিবন্ধন করুন"
+    },
+
+    "register": {
+        "title": "নিবন্ধন",
+        "welcomeMessage": "নতুন গ্রাহকের জন্য নিবন্ধন করুন",
+        "loginWith": "অথবা নিবন্ধন করুন",
+        "registerMessage": "আপনার কি একাউন্ট আছে?",
+        "registerLink": "এখনই লগইন করুন"
+    },
+    "about": {
+        "title": "আমাদের সম্পর্কে",
+        "description": "এটি আমাদের সম্পর্কে পৃষ্ঠা"
+    },
+    "footer": {
+        "description1": "অসাধারণ ডিল এবং বিস্তৃত পণ্য সংগ্রহের জন্য LWSKart-এ আসুন।",
+        "description2": "আমাদের নির্ভরযোগ্য ই-কমার্স প্ল্যাটফর্মে নিরাপদ কেনাকাটা এবং দ্রুত ডেলিভারি উপভোগ করুন।",
+        "solutions": "সমাধানসমূহ",
+        "support": "সহায়তা",
+        "marketing": "মার্কেটিং",
+        "analytics": "বিশ্লেষণ",
+        "commerce": "বাণিজ্য",
+        "insights": "অন্তর্দৃষ্টি",
+        "pricing": "মূল্য নির্ধারণ",
+        "guides": "গাইডস",
+        "apiStatus": "API অবস্থা",
+        "documentation": "নথিপত্র"
+    },
+    "account": {
+        "title": "অ্যাকাউন্ট",
+        "personalDetails": "ব্যক্তিগত বিবরণ",
+        "billingAdress": "বিলিং ঠিকানা",
+        "shippingAdress": "শিপিং ঠিকানা"
+    },
+    "shop": "দোকান",
+    "copyright": "© টেইলকমার্স - সর্বস্বত্ব সংরক্ষিত"
+}

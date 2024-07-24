@@ -1,0 +1,92 @@
+{
+    "header": {
+        "search": "Search",
+        "searchholder": "Search for products...",
+        "wishlist": "Wishlist",
+        "cart": "Cartlist"
+    },
+    "navbar": {
+        "home": "Home",
+        "shop": "Shop",
+        "aboutUs": "About Us",
+        "logout": "Logout",
+        "login": "Login",
+        "AllCategories": "All Categories"
+    },
+    "banner": {
+        "title1": "Best Collection For",
+        "title2": "Home Decoration",
+        "description": "Ecommerce is the electronic buying and selling of goods and services, usually via the internet.",
+        "shopNow": "Shop Now"
+    },
+    "features": {
+        "freeShipping": "Free Shipping",
+        "orderOver": "Order over $200",
+        "moneyReturns": "Money Returns",
+        "moneyReturnsDescription": "30 days money returns",
+        "support": "24/7 Support",
+        "supportDescription": "Customer support"
+    },
+    "home": {
+        "category": "Shop By Category",
+        "newArrivals": "New Arrivals",
+        "trending": "Trending Products"
+    },
+
+    "buttons": {
+        "addToCart": "Add To Cart",
+        "buyNow": "Shope Now",
+        "viewDetails": "View Details",
+        "share": "Share",
+        "addToWishlist": "Add To Wishlist"
+    },
+    "product": {
+        "title": "Products",
+        "relatedProduct": "Related Products",
+        "details": "Product Details",
+        "addtocart": "Add To Cart",
+        "addToWishlist": "Add To Wishlist",
+        "addedtowishlist": "Added To Wishlist"
+    },
+    "login": {
+        "title": "Login",
+        "welcomeMessage": "Welcome back, customer",
+        "loginWith": "Or login with",
+        "registerMessage": "Don't have an account?",
+        "registerLink": "Register now"
+    },
+    "register": {
+        "title": "Register",
+        "welcomeMessage": "Register for new cosutumer",
+        "loginWith": "Or register with",
+        "registerMessage": "Already have an account?",
+        "registerLink": "Login now"
+    },
+    "about": {
+        "title": "About Us",
+        "description": "This is About Us Page"
+    },
+    "footer": {
+        "description1": "Discover great deals and a wide range of products at LWSKart.",
+        "description2": " Enjoy secure shopping and fast delivery on our trusted e-commerce platform.",
+        "solutions": "Solutions",
+        "support": "Support",
+        "marketing": "Marketing",
+        "analytics": "Analytics",
+        "commerce": "Commerce",
+        "insights": "Insights",
+        "pricing": "Pricing",
+        "guides": "Guides",
+        "apiStatus": "API Status",
+        "documentation": "Documentation"
+    },
+    "account": {
+        "title": "Account",
+        "personalDetails": "Personal Details",
+        "billingAdress": "Billing Adress",
+        "shippingAdress": "Shipping Adress"
+    },
+    "shop": "Shop",
+    "copyright": "© TailCommerce - All Right Reserved",
+    "BestSeller": "Best Seller"
+}

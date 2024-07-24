@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "665a0c93a0dff94c2a57b44a"
+  },
+  "name": "TEST",
+  "email": "test@mail.com",
+  "password": "test@mail.com",
+  "image": "http://res.cloudinary.com/dsrzvq2yt/image/upload/v1717224009/lwskart_user/dn4k3jsoqmytgv82ora3.png",
+  "phone": 1581494806,
+  "__v": 0
+}]

@@ -1,0 +1,36 @@
+{
+  "name": "final-assignment-lwskart",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/mongodb-adapter": "^3.1.0",
+    "@fileforge/react-print": "^0.1.138",
+    "@formatjs/intl-localematcher": "^0.5.4",
+    "@onedoc/client": "^0.1.33",
+    "cloudinary": "^2.2.0",
+    "mongodb": "^6.6.2",
+    "mongoose": "^8.4.0",
+    "negotiator": "^0.6.3",
+    "next": "14.2.3",
+    "next-auth": "^5.0.0-beta.18",
+    "next-cloudinary": "^6.6.2",
+    "next-share": "^0.27.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-toastify": "^10.0.5",
+    "resend": "^3.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
