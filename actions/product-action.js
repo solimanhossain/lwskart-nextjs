@@ -17,6 +17,11 @@ async function getSingleProduct(productId) {
     }
 }
 
+async function findHomeProducts(obj) {
+    await connectMongo();
+    return await ProductModel.find().sort(obj).limit(8).lean();
+}
+
 async function findSortedProducts(obj) {
     await connectMongo();
     return await ProductModel.find().sort(obj).lean();
@@ -55,4 +60,5 @@ export {
     aggregateCategoryCount,
     updateProductQuantity,
     searchQuaryFinder,
+    findHomeProducts,
 };

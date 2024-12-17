@@ -5,6 +5,7 @@ import ProductQuantity from "./ProductQuantity";
 import { useRouter } from "next/navigation";
 import { cart } from "@/components/SvgIcon";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function AddTo({ userId, productId, lang, quantity }) {
     const [quantityCount, setQuantityCount] = useState(1);
@@ -18,6 +19,7 @@ export default function AddTo({ userId, productId, lang, quantity }) {
         const carted = await addToCart(userId, productId, quanityCount);
 
         if (carted.status === "added") {
+            toast.success("Added to cart successfully!");
             router.refresh();
         }
     }

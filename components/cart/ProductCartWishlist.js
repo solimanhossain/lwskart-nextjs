@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { addToWishlist, isWishlisted } from "@/actions/connected-action";
 import { wishList } from "../SvgIcon";
+import { toast } from "sonner";
 
 export default function ProductCartWishlist({ userId, productId }) {
     const router = useRouter();
@@ -16,6 +17,7 @@ export default function ProductCartWishlist({ userId, productId }) {
         const res = await addToWishlist(userId, productId);
 
         if (res.status === "added") {
+            toast.success(res.message);
             router.refresh();
         }
     }

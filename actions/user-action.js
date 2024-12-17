@@ -9,6 +9,12 @@ import { revalidatePath } from "next/cache";
 async function loginUser(formData) {
     await connectMongo();
     const user = Object.fromEntries(formData);
+    const isExist = await UserModel.findOne({
+        email: user.email,
+        password: user.password,
+    });
+    if (!isExist) return { error: "Email or password mismatch" };
+
     await signIn("credentials", user);
     redirect("/account");
 }
@@ -25,20 +31,30 @@ async function getUserData(email) {
 
 async function registerUser(formData) {
     await connectMongo();
-    let email = formData.get("email");
+
+    const email = formData.get("email");
     const isExist = await UserModel.findOne({ email });
-    if (isExist) return { message: "Your email is already registered!" };
-    const user = Object.fromEntries(formData);
-    const created = await UserModel.create(user);
-    redirect("/login");
+    if (isExist) return { error: "Email already exists." };
+
+    try {
+        const user = Object.fromEntries(formData);
+        await UserModel.create(user);
+        redirect("/login");
+    } catch (err) {
+        return { error: "An error occurred during registration." };
+    }
 }
 
 async function updateUserImage(imgUrl, email) {
     await connectMongo();
-    const user = await UserModel.findOne({ email });
-    user.image = imgUrl;
-    await user.save();
-    redirect("/account");
+    try {
+        const user = await UserModel.findOne({ email });
+        user.image = imgUrl;
+        await user.save();
+        redirect("/account");
+    } catch (error) {
+        return { error };
+    }
 }
 
 async function editUserData(email, formData) {
@@ -54,46 +70,50 @@ async function getAddress(email) {
 
 async function editShippingAddress(email, userData) {
     await connectMongo();
-    const shipAdress = await UserAddressModel.findOne({ email });
+    try {
+        const shipAdress = await UserAddressModel.findOne({ email });
 
-    if (!shipAdress) {
-        const created = await UserAddressModel.create({
-            email: email,
-            shippingAdress: userData,
-        });
-    }
-
-    await UserAddressModel.findOneAndUpdate(
-        { email },
-        {
-            email: email,
-            shippingAdress: userData,
+        if (!shipAdress) {
+            const created = await UserAddressModel.create({
+                email: email,
+                shippingAdress: userData,
+            });
         }
-    );
-    // revalidatePath("/account");
-    // redirect("/account");
+
+        await UserAddressModel.findOneAndUpdate(
+            { email },
+            {
+                email: email,
+                shippingAdress: userData,
+            }
+        );
+    } catch (error) {
+        return { error };
+    }
 }
 
 async function editBillingAddress(email, userData) {
     await connectMongo();
-    const shipAdress = await UserAddressModel.findOne({ email });
+    try {
+        const shipAdress = await UserAddressModel.findOne({ email });
 
-    if (!shipAdress) {
-        const created = await UserAddressModel.create({
-            email: email,
-            billingAdress: userData,
-        });
-    }
-
-    await UserAddressModel.findOneAndUpdate(
-        { email },
-        {
-            email: email,
-            billingAdress: userData,
+        if (!shipAdress) {
+            const created = await UserAddressModel.create({
+                email: email,
+                billingAdress: userData,
+            });
         }
-    );
-    revalidatePath("/account");
-    redirect("/account");
+
+        await UserAddressModel.findOneAndUpdate(
+            { email },
+            {
+                email: email,
+                billingAdress: userData,
+            }
+        );
+    } catch (error) {
+        return { error };
+    }
 }
 
 export {

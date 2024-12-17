@@ -4,6 +4,7 @@ import { addToWishlist, isWishlisted } from "@/actions/connected-action";
 import { wishList } from "@/components/SvgIcon";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 export default function WishlistCartAdd({ userId, productId, lang }) {
     const [isWishlist, setIsWishlist] = useState(false);
@@ -26,6 +27,7 @@ export default function WishlistCartAdd({ userId, productId, lang }) {
         const res = await addToWishlist(userId, productId);
 
         if (res.status === "added") {
+            toast.success("Added to wishlist successfully!");
             setIsWishlist(true);
             router.refresh();
         }

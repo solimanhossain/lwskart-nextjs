@@ -15,9 +15,9 @@ export default async function Category({ locale }) {
                     className="relative rounded-sm overflow-hidden group "
                 >
                     <Image
-                        src={`/assets/images/category/${category
+                        src={`https://i.getspace.eu/cloud/apps/files_sharing/publicpreview/zq6bQMf4r99B7Fq?file=/${category
                             .split(" ")
-                            .join("-")}.jpg`}
+                            .join("-")}.jpg&x=300&y=300`}
                         alt={category}
                         className="w-full object-cover skeleton"
                         width={300}

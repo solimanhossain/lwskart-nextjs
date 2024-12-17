@@ -1,6 +1,7 @@
 import { editBillingAddress, editShippingAddress } from "@/actions/user-action";
 import { redirect } from "next/navigation";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function AdressEdit({ mail, oldData, isEdit, typeAddr }) {
     const [editAdr, setEditAdr] = useState({
@@ -16,14 +17,15 @@ export default function AdressEdit({ mail, oldData, isEdit, typeAddr }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        const res = {};
         if (typeAddr === "shippingAdress") {
-            editShippingAddress(mail, editAdr);
-            redirect("/account");
+            const res = editShippingAddress(mail, editAdr);
         } else if (typeAddr === "billingAdress") {
-            editBillingAddress(mail, editAdr);
+            const res = editBillingAddress(mail, editAdr);
         }
         isEdit(false);
-
+        if (res?.error) return toast.error(res.error);
+        toast.success("Details Updated successfully!");
         redirect("/account");
     }
 

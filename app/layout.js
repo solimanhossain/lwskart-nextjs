@@ -1,5 +1,6 @@
 import connectMongo from "@/dbConnect/connectMongo";
 import { Poppins, Roboto } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -27,6 +28,7 @@ export default async function RootLayout({ children }) {
         <html lang="en">
             <body className={`${poppins.className} ${roboto.className}`}>
                 {children}
+                <Toaster position="top-center" richColors closeButton />
             </body>
         </html>
     );

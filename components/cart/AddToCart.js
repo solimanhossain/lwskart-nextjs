@@ -2,6 +2,7 @@
 import { addToCart } from "@/actions/connected-action";
 import { cart } from "@/components/SvgIcon";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export default function AddToCart({ userId, productId, lang }) {
     const router = useRouter();
@@ -14,6 +15,7 @@ export default function AddToCart({ userId, productId, lang }) {
             const cart = await addToCart(userId, productId);
 
             if (cart.status === "added") {
+                toast.success(cart.message);
                 router.refresh();
             }
         }

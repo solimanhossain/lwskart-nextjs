@@ -3,6 +3,7 @@
 import { addToCart, removeFromWishlist } from "@/actions/connected-action";
 import { thrash } from "../SvgIcon";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export default function WishlistAction({ userId, productId }) {
     const router = useRouter();
@@ -15,12 +16,14 @@ export default function WishlistAction({ userId, productId }) {
         const cart = await addToCart(userId, productId, count);
         if (cart.status === "added" || cart.status === "updated") {
             await removeFromWishlist(userId, productId);
+            toast.info("Added to cart!");
             router.refresh();
         }
     }
 
     async function handleremoveFromWishlist(userId, productId) {
         await removeFromWishlist(userId, productId);
+        toast.warning("Removed from wishlist!");
         router.refresh();
     }
 

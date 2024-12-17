@@ -1,5 +1,6 @@
-import { editUserData } from "@/actions/user-action";
+import { toast } from "sonner";
 import { useState } from "react";
+import { editUserData } from "@/actions/user-action";
 
 export default function AccountProfileEdit({ user, isEdit }) {
     const [userData, setUserData] = useState({
@@ -14,7 +15,9 @@ export default function AccountProfileEdit({ user, isEdit }) {
 
     function submitEditedUser(e) {
         e.preventDefault();
-        editUserData(user?.email, userData);
+        const res = editUserData(user?.email, userData);
+        if (res?.error) return toast.error(res.error);
+        toast.success("Updated successfully!");
         isEdit(false);
     }
 

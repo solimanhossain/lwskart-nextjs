@@ -1,8 +1,22 @@
+"use client";
+
+import { toast } from "sonner";
 import { registerUser } from "@/actions/user-action";
 
 export default function RegisterForm() {
+    async function handleResponse(formData) {
+        const data = await registerUser(formData);
+        // console.log(data);
+
+        if (data?.error) {
+            toast.error(data.error);
+        } else {
+            toast.success("Registered successfully! Redirecting...");
+        }
+    }
+
     return (
-        <form action={registerUser} autoComplete="off">
+        <form action={handleResponse} autoComplete="off">
             <div className="space-y-2">
                 <div>
                     <label htmlFor="name" className="text-gray-600 mb-2 block">

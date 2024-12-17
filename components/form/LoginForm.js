@@ -1,8 +1,22 @@
+"use client";
+
+import { toast } from "sonner";
 import { loginUser } from "@/actions/user-action";
 
-export default async function LoginForm() {
+export default function LoginForm() {
+    async function handleResponse(formData) {
+        const data = await loginUser(formData);
+        // console.log(data);
+
+        if (data?.error) {
+            toast.error(data.error);
+        } else {
+            toast.success("Login successfully! Redirecting");
+        }
+    }
+
     return (
-        <form action={loginUser}>
+        <form action={handleResponse}>
             <div className="space-y-2">
                 <div>
                     <label htmlFor="email" className="text-gray-600 mb-2 block">
